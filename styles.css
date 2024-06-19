@@ -1,0 +1,116 @@
+/* Base styles for night mode */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+/* Title and heading styles */
+h1, h2 {
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+/* Instructions section */
+#instructions {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Center the game area */
+#game-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+/* Puzzle table styles */
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 360px;
+    height: 360px;
+}
+
+td {
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+td:hover {
+    background-color: #333;
+}
+
+.tile16 {
+    background-color: #121212;
+    cursor: default;
+}
+
+/* Button styles */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Statistics section */
+#game-stats {
+    margin-top: 20px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    color: white;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

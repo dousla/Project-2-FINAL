@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Puzzle Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Sliding Puzzle Game</h1>
+    <div id="instructions">
+        <h2>Instructions:</h2>
+        <ol>
+            <li>This is a 4x4 grid with 15 numbered tiles and one empty space.</li>
+            <li>Your goal is to arrange the tiles in order from 1 to 15, with the empty space in the bottom-right corner.</li>
+            <li>Click a tile next to the empty space to move it.</li>
+            <li>Continue until all tiles are in order.</li>
+        </ol>
+    </div>
+    <div id="game-area">
+        <table id="puzzle-board">
+            <!-- Puzzle tiles will be created by JavaScript -->
+        </table>
+    </div>
+    <div id="controls">
+        <button onclick="startNewGame()">New Game</button>
+        <button onclick="startSimpleGame()">Simple Game</button>
+    </div>
+    <div id="game-stats">
+        <p>Moves: <span id="moveCounter">0</span></p>
+        <p>Time: <span id="timeCounter">0</span> seconds</p>
+    </div>
+    <!-- Win Modal -->
+    <div id="winModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>CONGRATULATIONS!</h2>
+            <p>You've successfully reordered the puzzle numbers in sequential order!</p>
+            <p>Moves: <span id="finalMoveCount"></span></p>
+            <p>Time: <span id="finalTimeCount"></span> seconds</p>
+            <button onclick="playAgain()">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
